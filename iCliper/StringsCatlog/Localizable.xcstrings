@@ -1,0 +1,768 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    " %@" : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
+    "About" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אודות"
+          }
+        }
+      }
+    },
+    "AboutView_AboutTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אודות"
+          }
+        }
+      }
+    },
+    "AboutView_Description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "the powerful clipboard manager for iOS that enhances your copy-and-paste experience. Effortlessly manage and organize your clipboard history, saving time and streamlining your workflow."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מנהל הלוח העתקות שמשפר את חוויית ההעתקה וההדבקה שלך. נהל וארגן ללא מאמץ את היסטוריית הלוח שלך, חיסכון בזמן וייעול זרימת העבודה שלך."
+          }
+        }
+      }
+    },
+    "AboutView_Version" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "גירסה"
+          }
+        }
+      }
+    },
+    "Clipboard_DoneButton" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סיום"
+          }
+        }
+      }
+    },
+    "Clipboard_EditButton" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עריכה"
+          }
+        }
+      }
+    },
+    "Clipboard_navigationTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clipboard"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לוח העתקות"
+          }
+        }
+      }
+    },
+    "Clipboard_noCopies" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No copies"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אין העתקות להציג"
+          }
+        }
+      }
+    },
+    "Clipboard_SearchTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חיפוש"
+          }
+        }
+      }
+    },
+    "Error: Unable to find the video file." : {
+
+    },
+    "final steps" : {
+
+    },
+    "HowToUseView_FinalSteps_ButtonDone" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סיום"
+          }
+        }
+      }
+    },
+    "HowToUseView_FinalSteps_Text1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now, every time you want to use the app"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עכשיו, בכל פעם שאתה רוצה להשתמש באפליקציה"
+          }
+        }
+      }
+    },
+    "HowToUseView_FinalSteps_Text2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "simply change your keyboard to iCliper."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פשוט שנה את המקלדת שלך ל-iCliper."
+          }
+        }
+      }
+    },
+    "HowToUseView_Step" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלב"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step1_Button" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open App Settings"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פתח את ההגדרות"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step1_Text1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check if permissions have been granted and add a iCliper keyboard"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בדוק אם ניתנו הרשאות והוסף מקלדת iCliper"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step1_Text2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let's open the setting"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בוא נפתח את ההגדרות"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step1_Text3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scroll down, and click iCliper"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "וגלול מטה ולחץ על iCliper"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step2_ButtonNext" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next Step"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלב הבא"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step2_Text1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click On \"Keyboard\""
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לחץ על ״מקלדת״"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step3_ButtonNext" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next Step"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלב הבא"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step3_Text1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toggle the switch to \"Keyboard\" and \"Allow Full Access\" to turn it on"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "העבר את המתג \"מקלדת\" ו\"אפשר גישה מלאה\" למצב מופעל"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step4_ButtonNext" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next Step"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלב הבא"
+          }
+        }
+      }
+    },
+    "HowToUseView_Step4_Text1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For a better experience, we recommend changing \"Paste from Other App\" to allow"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לחוויה טובה יותר, אנו ממליצים לשנות את ״הדבקה מיישומים אחרים״ לאפשר"
+          }
+        }
+      }
+    },
+    "HowToUseView_StepOf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Of"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מתוך"
+          }
+        }
+      }
+    },
+    "iCliper" : {
+      "localizations" : {
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCliper"
+          }
+        }
+      }
+    },
+    "iCliperApp_TabView_Clipboard" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clipboard"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לוח העתקות"
+          }
+        }
+      }
+    },
+    "iCliperApp_TabView_Setting" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setting"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הגדרות"
+          }
+        }
+      }
+    },
+    "KeyboardView_AddCopies" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add copies"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הוסף העתקה"
+          }
+        }
+      }
+    },
+    "KeyboardView_DoneButton" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סיום"
+          }
+        }
+      }
+    },
+    "KeyboardView_EditButton" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עריכה"
+          }
+        }
+      }
+    },
+    "KeyboardView_noCopies" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No copies"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אין העתקות"
+          }
+        }
+      }
+    },
+    "KeyboardView_NoTextCopied" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No text copied"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אין טקסט להדביק"
+          }
+        }
+      }
+    },
+    "KeyboardView_OpenAccess_Text1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To fully enjoy the app, please grant the necessary permissions by following these simple steps:"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כדי ליהנות מהאפליקציה במלואה, אנא הענק את ההרשאות הנדרשות על ידי ביצוע השלבים הפשוטים הבאים:"
+          }
+        }
+      }
+    },
+    "KeyboardView_OpenAccess_Text2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. Open your device settings."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. פתח את הגדרות המכשיר שלך."
+          }
+        }
+      }
+    },
+    "KeyboardView_OpenAccess_Text3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. Scroll down and tap on \"iCliper\"."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. גלול מטה והקש על \"iCliper\"."
+          }
+        }
+      }
+    },
+    "KeyboardView_OpenAccess_Text4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. Select \"Keyboard\" from the menu."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. בחר \"מקלדת\" מהתפריט."
+          }
+        }
+      }
+    },
+    "KeyboardView_OpenAccess_Text5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. Toggle the switch to \"Allow Full Access\" and \"Keyboard\" to turn it on."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. העבר את המתג למצב \"אפשר גישה מלאה\" ו\"מקלדת\" כדי להפעיל אותו."
+          }
+        }
+      }
+    },
+    "KeyboardView_OpenAccess_Text6" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "That's it! You're all set to make the most of the app."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "זהו זה! אתה מוכן להפיק את המרב מהאפליקציה."
+          }
+        }
+      }
+    },
+    "SettingView_AlertDeleteAll" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete All"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מחק הכל"
+          }
+        }
+      }
+    },
+    "SettingView_AlertDeleteButton" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מחק"
+          }
+        }
+      }
+    },
+    "SettingView_HowToUse" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How to use?"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "איך להשתמש?"
+          }
+        }
+      }
+    },
+    "SettingView_MessageAlert" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure to Delete all your copied?"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "האם אתה בטוח למחוק את כל ההעתקות?"
+          }
+        }
+      }
+    },
+    "SettingView_RateUs" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate Us"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דרג אותנו"
+          }
+        }
+      }
+    },
+    "SettingView_ShareApp" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share App"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שתף את האפליקציה"
+          }
+        }
+      }
+    },
+    "SettingView_Tittle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setting"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הגדרות"
+          }
+        }
+      }
+    },
+    "SettingViewModel_ShareText" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check out this awesome app! https://apps.apple.com/app/iCliper/6473295955"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בדוק את האפליקציה המדהימה הזו! https://apps.apple.com/app/iCliper/6473295955"
+          }
+        }
+      }
+    },
+    "Step Four" : {
+
+    },
+    "Step One" : {
+
+    },
+    "Step Three" : {
+
+    },
+    "Step Two" : {
+
+    }
+  },
+  "version" : "1.0"
+}

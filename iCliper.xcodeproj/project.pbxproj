@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		172B5FE62B15369300E7771D /* CopiedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3A92B13A80D0057AAB9 /* CopiedData.swift */; };
+		17447C532B14EC1A004F96D4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17447C522B14EC1A004F96D4 /* Service.swift */; };
+		175BC72F2B149B730044E2EB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175BC72E2B149B730044E2EB /* SettingView.swift */; };
+		175BC7312B149B7B0044E2EB /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175BC7302B149B7B0044E2EB /* SettingViewModel.swift */; };
+		175D20292B17946600840BCB /* ShowKeyboardHE.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 175D20262B17945100840BCB /* ShowKeyboardHE.mp4 */; };
+		176F372D2B14711800C26497 /* ClipBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F372C2B14711800C26497 /* ClipBoardViewModel.swift */; };
+		176FB3762B139B740057AAB9 /* iCliperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3752B139B740057AAB9 /* iCliperApp.swift */; };
+		176FB3782B139B740057AAB9 /* ClipBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3772B139B740057AAB9 /* ClipBoardView.swift */; };
+		176FB37A2B139B750057AAB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176FB3792B139B750057AAB9 /* Assets.xcassets */; };
+		176FB37D2B139B750057AAB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176FB37C2B139B750057AAB9 /* Preview Assets.xcassets */; };
+		176FB38A2B139B910057AAB9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3892B139B910057AAB9 /* KeyboardViewController.swift */; };
+		176FB38E2B139B910057AAB9 /* Keyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 176FB3872B139B910057AAB9 /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		176FB3942B139BBF0057AAB9 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3932B139BBF0057AAB9 /* KeyboardView.swift */; };
+		176FB3A02B13A1500057AAB9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB39F2B13A1500057AAB9 /* Color.swift */; };
+		176FB3A12B13A1EF0057AAB9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB39F2B13A1500057AAB9 /* Color.swift */; };
+		176FB3A22B13A2690057AAB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176FB3792B139B750057AAB9 /* Assets.xcassets */; };
+		176FB3A62B13A6FC0057AAB9 /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3A52B13A6FC0057AAB9 /* KeyboardViewModel.swift */; };
+		176FB3A72B13A7350057AAB9 /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3A52B13A6FC0057AAB9 /* KeyboardViewModel.swift */; };
+		176FB3AA2B13A80D0057AAB9 /* CopiedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3A92B13A80D0057AAB9 /* CopiedData.swift */; };
+		176FB3AD2B13A8690057AAB9 /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3AC2B13A8690057AAB9 /* SwiftDataManager.swift */; };
+		176FB3AF2B13B20E0057AAB9 /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3AC2B13A8690057AAB9 /* SwiftDataManager.swift */; };
+		177AE0D12B163F00005D7170 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AE0D02B163F00005D7170 /* AboutView.swift */; };
+		177AE0D32B16516B005D7170 /* HowToUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AE0D22B16516B005D7170 /* HowToUseView.swift */; };
+		177AE0D82B1652AC005D7170 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 177AE0D72B1652AC005D7170 /* Localizable.xcstrings */; };
+		177AE0D92B1652B2005D7170 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 177AE0D72B1652AC005D7170 /* Localizable.xcstrings */; };
+		178F36D22B1759B5007F486E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17447C522B14EC1A004F96D4 /* Service.swift */; };
+		17AE9B6E2B160BED003B3A60 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3932B139BBF0057AAB9 /* KeyboardView.swift */; };
+		17AE9B6F2B160C20003B3A60 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3892B139B910057AAB9 /* KeyboardViewController.swift */; };
+		17CF612A2B186624002230DD /* ShowKeyboardEN.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 17CF61292B18654F002230DD /* ShowKeyboardEN.mp4 */; };
+		17CF612C2B186740002230DD /* HowToUseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF612B2B186740002230DD /* HowToUseViewModel.swift */; };
+		17D148AE2B173D5F00E4DE1D /* ClipBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3772B139B740057AAB9 /* ClipBoardView.swift */; };
+		17D148AF2B173D6200E4DE1D /* ClipBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F372C2B14711800C26497 /* ClipBoardViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		176FB38C2B139B910057AAB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 176FB36A2B139B740057AAB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 176FB3862B139B910057AAB9;
+			remoteInfo = "iCliper-Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		176FB3922B139B910057AAB9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				176FB38E2B139B910057AAB9 /* Keyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		172C29FE2B15F0F8005D44E7 /* iCliperDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCliperDebug.entitlements; sourceTree = "<group>"; };
+		172C29FF2B15F0FF005D44E7 /* iCliper-KeyboardDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iCliper-KeyboardDebug.entitlements"; sourceTree = "<group>"; };
+		17447C522B14EC1A004F96D4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		175BC72E2B149B730044E2EB /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		175BC7302B149B7B0044E2EB /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		175D20262B17945100840BCB /* ShowKeyboardHE.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShowKeyboardHE.mp4; sourceTree = "<group>"; };
+		175ECC232B17BF75003A8C9E /* KeyboardRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardRelease.entitlements; sourceTree = "<group>"; };
+		176F372C2B14711800C26497 /* ClipBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipBoardViewModel.swift; sourceTree = "<group>"; };
+		176FB3722B139B740057AAB9 /* iCliper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCliper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		176FB3752B139B740057AAB9 /* iCliperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCliperApp.swift; sourceTree = "<group>"; };
+		176FB3772B139B740057AAB9 /* ClipBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipBoardView.swift; sourceTree = "<group>"; };
+		176FB3792B139B750057AAB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		176FB37C2B139B750057AAB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		176FB3872B139B910057AAB9 /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		176FB3892B139B910057AAB9 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		176FB38B2B139B910057AAB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		176FB3932B139BBF0057AAB9 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		176FB39F2B13A1500057AAB9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		176FB3A52B13A6FC0057AAB9 /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
+		176FB3A92B13A80D0057AAB9 /* CopiedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiedData.swift; sourceTree = "<group>"; };
+		176FB3AC2B13A8690057AAB9 /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
+		177AE0D02B163F00005D7170 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		177AE0D22B16516B005D7170 /* HowToUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseView.swift; sourceTree = "<group>"; };
+		177AE0D72B1652AC005D7170 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		17CF61292B18654F002230DD /* ShowKeyboardEN.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShowKeyboardEN.mp4; sourceTree = "<group>"; };
+		17CF612B2B186740002230DD /* HowToUseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		176FB36F2B139B740057AAB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		176FB3842B139B910057AAB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17447C512B14EC0C004F96D4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				176FB3AC2B13A8690057AAB9 /* SwiftDataManager.swift */,
+				17447C522B14EC1A004F96D4 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		17576BCD2B17912200F74836 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				175D20262B17945100840BCB /* ShowKeyboardHE.mp4 */,
+				17CF61292B18654F002230DD /* ShowKeyboardEN.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		175BC72B2B149B4F0044E2EB /* ClipBoard */ = {
+			isa = PBXGroup;
+			children = (
+				176FB3772B139B740057AAB9 /* ClipBoardView.swift */,
+				176F372C2B14711800C26497 /* ClipBoardViewModel.swift */,
+			);
+			path = ClipBoard;
+			sourceTree = "<group>";
+		};
+		175BC72D2B149B600044E2EB /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				175BC72E2B149B730044E2EB /* SettingView.swift */,
+				177AE0D02B163F00005D7170 /* AboutView.swift */,
+				175BC7302B149B7B0044E2EB /* SettingViewModel.swift */,
+				177AE0D22B16516B005D7170 /* HowToUseView.swift */,
+				17CF612B2B186740002230DD /* HowToUseViewModel.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		176F372B2B14710B00C26497 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				175BC72D2B149B600044E2EB /* Setting */,
+				175BC72B2B149B4F0044E2EB /* ClipBoard */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		176FB3692B139B740057AAB9 = {
+			isa = PBXGroup;
+			children = (
+				175ECC232B17BF75003A8C9E /* KeyboardRelease.entitlements */,
+				176FB3742B139B740057AAB9 /* iCliper */,
+				176FB3882B139B910057AAB9 /* iCliper-Keyboard */,
+				176FB3732B139B740057AAB9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		176FB3732B139B740057AAB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				176FB3722B139B740057AAB9 /* iCliper.app */,
+				176FB3872B139B910057AAB9 /* Keyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		176FB3742B139B740057AAB9 /* iCliper */ = {
+			isa = PBXGroup;
+			children = (
+				172C29FE2B15F0F8005D44E7 /* iCliperDebug.entitlements */,
+				176FB3752B139B740057AAB9 /* iCliperApp.swift */,
+				17576BCD2B17912200F74836 /* Videos */,
+				177AE0D42B16528F005D7170 /* StringsCatlog */,
+				17447C512B14EC0C004F96D4 /* Service */,
+				176FB3A82B13A7EF0057AAB9 /* Model */,
+				176FB3982B13A1140057AAB9 /* Extension */,
+				176F372B2B14710B00C26497 /* Core */,
+				176FB3792B139B750057AAB9 /* Assets.xcassets */,
+				176FB37B2B139B750057AAB9 /* Preview Content */,
+			);
+			path = iCliper;
+			sourceTree = "<group>";
+		};
+		176FB37B2B139B750057AAB9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				176FB37C2B139B750057AAB9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		176FB3882B139B910057AAB9 /* iCliper-Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				172C29FF2B15F0FF005D44E7 /* iCliper-KeyboardDebug.entitlements */,
+				176FB3892B139B910057AAB9 /* KeyboardViewController.swift */,
+				176FB3932B139BBF0057AAB9 /* KeyboardView.swift */,
+				176FB3A52B13A6FC0057AAB9 /* KeyboardViewModel.swift */,
+				176FB38B2B139B910057AAB9 /* Info.plist */,
+			);
+			path = "iCliper-Keyboard";
+			sourceTree = "<group>";
+		};
+		176FB3982B13A1140057AAB9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				176FB39F2B13A1500057AAB9 /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		176FB3A82B13A7EF0057AAB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				176FB3A92B13A80D0057AAB9 /* CopiedData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		177AE0D42B16528F005D7170 /* StringsCatlog */ = {
+			isa = PBXGroup;
+			children = (
+				177AE0D72B1652AC005D7170 /* Localizable.xcstrings */,
+			);
+			path = StringsCatlog;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		176FB3712B139B740057AAB9 /* iCliper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 176FB3802B139B750057AAB9 /* Build configuration list for PBXNativeTarget "iCliper" */;
+			buildPhases = (
+				176FB36E2B139B740057AAB9 /* Sources */,
+				176FB36F2B139B740057AAB9 /* Frameworks */,
+				176FB3702B139B740057AAB9 /* Resources */,
+				176FB3922B139B910057AAB9 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				176FB38D2B139B910057AAB9 /* PBXTargetDependency */,
+			);
+			name = iCliper;
+			productName = iCliper;
+			productReference = 176FB3722B139B740057AAB9 /* iCliper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		176FB3862B139B910057AAB9 /* Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 176FB38F2B139B910057AAB9 /* Build configuration list for PBXNativeTarget "Keyboard" */;
+			buildPhases = (
+				176FB3832B139B910057AAB9 /* Sources */,
+				176FB3842B139B910057AAB9 /* Frameworks */,
+				176FB3852B139B910057AAB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keyboard;
+			productName = "iCliper-Keyboard";
+			productReference = 176FB3872B139B910057AAB9 /* Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		176FB36A2B139B740057AAB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					176FB3712B139B740057AAB9 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					176FB3862B139B910057AAB9 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 176FB36D2B139B740057AAB9 /* Build configuration list for PBXProject "iCliper" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				he,
+			);
+			mainGroup = 176FB3692B139B740057AAB9;
+			packageReferences = (
+			);
+			productRefGroup = 176FB3732B139B740057AAB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				176FB3712B139B740057AAB9 /* iCliper */,
+				176FB3862B139B910057AAB9 /* Keyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		176FB3702B139B740057AAB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				175D20292B17946600840BCB /* ShowKeyboardHE.mp4 in Resources */,
+				176FB37D2B139B750057AAB9 /* Preview Assets.xcassets in Resources */,
+				17CF612A2B186624002230DD /* ShowKeyboardEN.mp4 in Resources */,
+				177AE0D82B1652AC005D7170 /* Localizable.xcstrings in Resources */,
+				176FB37A2B139B750057AAB9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		176FB3852B139B910057AAB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				177AE0D92B1652B2005D7170 /* Localizable.xcstrings in Resources */,
+				176FB3A22B13A2690057AAB9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		176FB36E2B139B740057AAB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				176FB3A72B13A7350057AAB9 /* KeyboardViewModel.swift in Sources */,
+				176FB3A02B13A1500057AAB9 /* Color.swift in Sources */,
+				175BC72F2B149B730044E2EB /* SettingView.swift in Sources */,
+				176FB3782B139B740057AAB9 /* ClipBoardView.swift in Sources */,
+				175BC7312B149B7B0044E2EB /* SettingViewModel.swift in Sources */,
+				177AE0D32B16516B005D7170 /* HowToUseView.swift in Sources */,
+				17CF612C2B186740002230DD /* HowToUseViewModel.swift in Sources */,
+				176FB3762B139B740057AAB9 /* iCliperApp.swift in Sources */,
+				176FB3AD2B13A8690057AAB9 /* SwiftDataManager.swift in Sources */,
+				17AE9B6F2B160C20003B3A60 /* KeyboardViewController.swift in Sources */,
+				177AE0D12B163F00005D7170 /* AboutView.swift in Sources */,
+				17447C532B14EC1A004F96D4 /* Service.swift in Sources */,
+				17AE9B6E2B160BED003B3A60 /* KeyboardView.swift in Sources */,
+				176FB3AA2B13A80D0057AAB9 /* CopiedData.swift in Sources */,
+				176F372D2B14711800C26497 /* ClipBoardViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		176FB3832B139B910057AAB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17D148AF2B173D6200E4DE1D /* ClipBoardViewModel.swift in Sources */,
+				176FB38A2B139B910057AAB9 /* KeyboardViewController.swift in Sources */,
+				17D148AE2B173D5F00E4DE1D /* ClipBoardView.swift in Sources */,
+				172B5FE62B15369300E7771D /* CopiedData.swift in Sources */,
+				176FB3AF2B13B20E0057AAB9 /* SwiftDataManager.swift in Sources */,
+				178F36D22B1759B5007F486E /* Service.swift in Sources */,
+				176FB3942B139BBF0057AAB9 /* KeyboardView.swift in Sources */,
+				176FB3A12B13A1EF0057AAB9 /* Color.swift in Sources */,
+				176FB3A62B13A6FC0057AAB9 /* KeyboardViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		176FB38D2B139B910057AAB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 176FB3862B139B910057AAB9 /* Keyboard */;
+			targetProxy = 176FB38C2B139B910057AAB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		176FB37E2B139B750057AAB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		176FB37F2B139B750057AAB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		176FB3812B139B750057AAB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iCliper/iCliperDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iCliper/Preview Content\"";
+				DEVELOPMENT_TEAM = JH7VUP2CH4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Oran.iCliper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		176FB3822B139B750057AAB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iCliper/iCliper.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iCliper/Preview Content\"";
+				DEVELOPMENT_TEAM = JH7VUP2CH4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Oran.iCliper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		176FB3902B139B910057AAB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "iCliper-Keyboard/iCliper-KeyboardDebug.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JH7VUP2CH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iCliper-Keyboard/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Keyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Oran.iCliper.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		176FB3912B139B910057AAB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KeyboardRelease.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JH7VUP2CH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iCliper-Keyboard/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Keyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Oran.iCliper.iCliper-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		176FB36D2B139B740057AAB9 /* Build configuration list for PBXProject "iCliper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				176FB37E2B139B750057AAB9 /* Debug */,
+				176FB37F2B139B750057AAB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		176FB3802B139B750057AAB9 /* Build configuration list for PBXNativeTarget "iCliper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				176FB3812B139B750057AAB9 /* Debug */,
+				176FB3822B139B750057AAB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		176FB38F2B139B910057AAB9 /* Build configuration list for PBXNativeTarget "Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				176FB3902B139B910057AAB9 /* Debug */,
+				176FB3912B139B910057AAB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 176FB36A2B139B740057AAB9 /* Project object */;
+}
