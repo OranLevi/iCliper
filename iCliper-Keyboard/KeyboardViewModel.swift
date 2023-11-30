@@ -10,7 +10,7 @@ import SwiftData
 import Combine
 
 class KeyboardViewModel: ObservableObject {
-        
+    
     @Published var isNoTextCopied: Bool = false {
         didSet {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3){
@@ -18,10 +18,10 @@ class KeyboardViewModel: ObservableObject {
             }
         }
     }
-
+    
     let service = Service.shared
     let swiftDataManager = SwiftDataManager.shared
-
+    
     func gettingCopied(items: [CopiedData], context: ModelContext) {
         let pasted = UIPasteboard.general.string
         if items.contains(where: { $0.text == pasted }) {
@@ -38,7 +38,7 @@ class KeyboardViewModel: ObservableObject {
         if let textPasted = pasted {
             service.gettingCopied(context: context,text: textPasted)
         } else {
-                isNoTextCopied = true
+            isNoTextCopied = true
         }
     }
     
@@ -51,7 +51,7 @@ class KeyboardViewModel: ObservableObject {
     }
     
     func isOpenAccessGranted() -> Bool {
-          let inputVC = UIInputViewController()
-          return inputVC.hasFullAccess
-      }
+        let inputVC = UIInputViewController()
+        return inputVC.hasFullAccess
+    }
 }

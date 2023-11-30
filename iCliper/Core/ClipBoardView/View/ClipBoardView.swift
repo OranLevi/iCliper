@@ -14,10 +14,9 @@ struct ClipBoardView: View {
     @Query private var items: [CopiedData]
     
     @State private var editMode: EditMode = .inactive
-    @State private var selectedItemIndex: Int?
     
     @State private var itemStates: [String: Bool] = [:]
-
+    
     @StateObject private var vm = ClipBoardViewModel()
     
     var realArray: [CopiedData] {
@@ -46,18 +45,12 @@ struct ClipBoardView: View {
                             copyButton(textToCopy: item.text)
                                 .onTapGesture {
                                     vm.copyButton(text: item.text)
-
-                                                        itemStates[item.text] = true
-
-                                    
-                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.09) {
-                                                            itemStates[item.text] = false
-                                                        }
-
-                                    
+                                    itemStates[item.text] = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.09) {
+                                        itemStates[item.text] = false
+                                    }
                                 }
                         }
-                        
                     }
                     .onDelete(perform: { indexSet in
                         for index in indexSet {
@@ -110,10 +103,10 @@ extension ClipBoardView{
     
     
     private func copyButton(textToCopy: String) -> some View {
-         Image(systemName: itemStates[textToCopy] ?? false ? "doc.text.fill" : "doc.text")
-             .font(.title2)
-             .foregroundColor(Color.theme.buttons)
-     }
+        Image(systemName: itemStates[textToCopy] ?? false ? "doc.text.fill" : "doc.text")
+            .font(.title2)
+            .foregroundColor(Color.theme.buttons)
+    }
     
     private var empty: some View {
         Text("\(String(localized: "Clipboard_noCopies"))")

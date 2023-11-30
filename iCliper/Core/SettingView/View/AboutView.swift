@@ -10,7 +10,7 @@ import SwiftUI
 struct AboutView: View {
     
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-
+    
     
     var body: some View {
         NavigationView {
@@ -20,7 +20,6 @@ struct AboutView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 100)
                     .clipShape(Circle())
-//                    .overlay(Circle().stroke(Color.white, lineWidth: 4))
                     .shadow(radius: 10)
                 
                 Text("iCliper")
@@ -31,8 +30,8 @@ struct AboutView: View {
                     Text("\(String(localized: "AboutView_Version"))")
                     Text("\(appVersion ?? "")")
                 }
-                    .font(.headline)
-                    .foregroundColor(.gray)
+                .font(.headline)
+                .foregroundColor(.gray)
                 
                 Text("\(String(localized: "AboutView_Description"))")
                     .multilineTextAlignment(.center)

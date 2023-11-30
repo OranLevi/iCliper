@@ -38,12 +38,6 @@ class ClipBoardViewModel: ObservableObject {
         service.copy(text: text)
     }
     
-//    func paste(){
-//
-//        UIPasteboard.general.string = "key"
-//    }
-    
- 
     func delete(context: ModelContext, deleteItem: CopiedData){
         swiftDataManager.deleteItem(context: context, item: deleteItem)
     }

@@ -21,7 +21,7 @@ class SettingViewModel: ObservableObject {
     func actionSheet() {
         let shareText = String(localized: "SettingViewModel_ShareText")
         let av = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
-
+        
         // Get the topmost view controller from the current scene
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             if let topViewController = windowScene.windows.first?.rootViewController {
@@ -39,6 +39,18 @@ class SettingViewModel: ObservableObject {
                 // Once the topmost view controller is found, present the new one
                 currentViewController.present(av, animated: true, completion: nil)
             }
+        }
+    }
+    
+    func rateUs(){
+        let urlString = "https://apps.apple.com/app/iCliper/6473295955?action=write-review"
+
+        if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url) { success in
+                print(success ? "URL opened successfully." : "Error opening URL.")
+            }
+        } else {
+            print("Invalid URL or cannot open URL.")
         }
     }
 }

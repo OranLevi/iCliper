@@ -11,13 +11,13 @@ import AVKit
 struct HowToUseView: View {
     
     @Environment(\.dismiss) var dismiss
-
+    
     @StateObject private var vm = HowToUseViewModel()
     
     @State private var tabSelection: Int = 1
     @State private var numberSteps:Int = 4
- 
-      var body: some View {
+    
+    var body: some View {
         VStack {
             TabView(selection: $tabSelection){
                 stepOne
@@ -58,17 +58,17 @@ extension HowToUseView {
     private var stepOne: some View {
         VStack{
             Spacer()
-      
-  
+            
+            
             HStack(spacing:4){
                 Text(" \(String(localized: "HowToUseView_Step"))")
                 Text("\(tabSelection)")
                 Text(" \(String(localized: "HowToUseView_StepOf"))")
                 Text("\(numberSteps)")
             }
-                .font(.title)
-                .fontWeight(.bold)
-                .padding()
+            .font(.title)
+            .fontWeight(.bold)
+            .padding()
             Text("\(String(localized: "HowToUseView_Step1_Text1"))")
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
@@ -84,11 +84,10 @@ extension HowToUseView {
             Text("\(String(localized: "HowToUseView_Step1_Text3"))")
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
-                
+            
             Spacer()
             
             Button(action: {
-                // Open app settings
                 if let url = URL(string: UIApplication.openSettingsURLString) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
@@ -107,16 +106,16 @@ extension HowToUseView {
     private var stepTwo: some View {
         VStack{
             Spacer()
-     
+            
             HStack(spacing:4){
                 Text(" \(String(localized: "HowToUseView_Step"))")
                 Text("\(tabSelection)")
                 Text(" \(String(localized: "HowToUseView_StepOf"))")
                 Text("\(numberSteps)")
             }
-                .font(.title)
-                .fontWeight(.bold)
-                .padding()
+            .font(.title)
+            .fontWeight(.bold)
+            .padding()
             
             Text("\(String(localized: "HowToUseView_Step2_Text1"))")
                 .foregroundColor(.gray)
@@ -131,7 +130,6 @@ extension HowToUseView {
             
             Spacer()
             Button(action: {
-              
                 tabSelection = 3
             }) {
                 Text("\(String(localized: "HowToUseView_Step2_ButtonNext"))")
@@ -153,10 +151,10 @@ extension HowToUseView {
                 Text(" \(String(localized: "HowToUseView_StepOf"))")
                 Text("\(numberSteps)")
             }
-
-                .font(.title)
-                .fontWeight(.bold)
-                .padding()
+            
+            .font(.title)
+            .fontWeight(.bold)
+            .padding()
             Text("\(String(localized: "HowToUseView_Step3_Text1"))")
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
@@ -169,8 +167,6 @@ extension HowToUseView {
                 .padding()
             Spacer()
             Button(action: {
-              
-              
                 tabSelection = 4
             }) {
                 Text("\(String(localized: "HowToUseView_Step3_ButtonNext"))")
@@ -192,9 +188,9 @@ extension HowToUseView {
                 Text(" \(String(localized: "HowToUseView_StepOf"))")
                 Text("\(numberSteps)")
             }
-                .font(.title)
-                .fontWeight(.bold)
-                .padding()
+            .font(.title)
+            .fontWeight(.bold)
+            .padding()
             Text("\(String(localized: "HowToUseView_Step4_Text1"))")
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
@@ -205,12 +201,10 @@ extension HowToUseView {
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
                 .padding()
-        
-
+            
+            
             Spacer()
             Button(action: {
-              
-              
                 tabSelection = 5
             }) {
                 Text("\(String(localized: "HowToUseView_Step4_ButtonNext"))")
@@ -227,20 +221,20 @@ extension HowToUseView {
         VStack{
             Spacer()
             Text("\(String(localized: "HowToUseView_FinalSteps_Text1"))")
-                              .font(.title)
-                              .fontWeight(.bold)
-                              .multilineTextAlignment(.center)
-                              .padding()
+                .font(.title)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+                .padding()
             
             Text("\(String(localized: "HowToUseView_FinalSteps_Text2"))")
-                              .foregroundColor(.gray)
-                              .multilineTextAlignment(.center)
-                              .padding()
-                          
+                .foregroundColor(.gray)
+                .multilineTextAlignment(.center)
+                .padding()
+            
             
             if let videoURL = Bundle.main.url(forResource: "ShowKeyboard\(vm.currentLanguage)", withExtension: "mp4") {
-                     let player = AVPlayer(url: videoURL)
-                     let videoPlayer = VideoPlayer(player: player)
+                let player = AVPlayer(url: videoURL)
+                let videoPlayer = VideoPlayer(player: player)
                 videoPlayer
                     .onTapGesture {
                         player.play()
@@ -252,18 +246,14 @@ extension HowToUseView {
                     .onDisappear() {
                         player.pause()
                     }
-            
-         
-                
             } else {
                 Text("Error: Unable to find the video file.")
             }
             
-            
             Button(action: {
-              
+                
                 dismiss()
-           
+                
             }) {
                 Text("\(String(localized: "HowToUseView_FinalSteps_ButtonDone"))")
                     .foregroundColor(.white)
