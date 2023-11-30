@@ -21,15 +21,5 @@ class Service {
         let pasteBoard = UIPasteboard.general
            pasteBoard.string = text
     }
-    
-    func paste(text: String) -> String{
-        let pasteBoard = UIPasteboard.general
-        print("Copied Text: \(text )")
-            return pasteBoard.string ?? ""
-    }
-    
-    func openAppSetting(){
-       
-    }
-    
+
 }

@@ -130,32 +130,29 @@
 			path = Videos;
 			sourceTree = "<group>";
 		};
-		175BC72B2B149B4F0044E2EB /* ClipBoard */ = {
+		175BC72B2B149B4F0044E2EB /* ClipBoardView */ = {
 			isa = PBXGroup;
 			children = (
-				176FB3772B139B740057AAB9 /* ClipBoardView.swift */,
-				176F372C2B14711800C26497 /* ClipBoardViewModel.swift */,
+				17865C182B18986D00533692 /* ViewModel */,
+				17865C172B18986500533692 /* View */,
 			);
-			path = ClipBoard;
+			path = ClipBoardView;
 			sourceTree = "<group>";
 		};
-		175BC72D2B149B600044E2EB /* Setting */ = {
+		175BC72D2B149B600044E2EB /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
-				175BC72E2B149B730044E2EB /* SettingView.swift */,
-				177AE0D02B163F00005D7170 /* AboutView.swift */,
-				175BC7302B149B7B0044E2EB /* SettingViewModel.swift */,
-				177AE0D22B16516B005D7170 /* HowToUseView.swift */,
-				17CF612B2B186740002230DD /* HowToUseViewModel.swift */,
+				17865C152B18984100533692 /* ViewModel */,
+				17865C142B18983C00533692 /* View */,
 			);
-			path = Setting;
+			path = SettingView;
 			sourceTree = "<group>";
 		};
 		176F372B2B14710B00C26497 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				175BC72D2B149B600044E2EB /* Setting */,
-				175BC72B2B149B4F0044E2EB /* ClipBoard */,
+				175BC72D2B149B600044E2EB /* SettingView */,
+				175BC72B2B149B4F0044E2EB /* ClipBoardView */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -238,6 +235,41 @@
 				177AE0D72B1652AC005D7170 /* Localizable.xcstrings */,
 			);
 			path = StringsCatlog;
+			sourceTree = "<group>";
+		};
+		17865C142B18983C00533692 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				175BC72E2B149B730044E2EB /* SettingView.swift */,
+				177AE0D22B16516B005D7170 /* HowToUseView.swift */,
+				177AE0D02B163F00005D7170 /* AboutView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17865C152B18984100533692 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17CF612B2B186740002230DD /* HowToUseViewModel.swift */,
+				175BC7302B149B7B0044E2EB /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		17865C172B18986500533692 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176FB3772B139B740057AAB9 /* ClipBoardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17865C182B18986D00533692 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				176F372C2B14711800C26497 /* ClipBoardViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

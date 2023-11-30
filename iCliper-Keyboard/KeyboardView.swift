@@ -9,11 +9,11 @@ import SwiftUI
 import SwiftData
 
 struct KeyboardView: View {
-
+    
     @Environment(\.modelContext) private var context
-
+    
     @Query private var items: [CopiedData]
-
+    
     @StateObject private var vm = KeyboardViewModel()
     @State private var heightKeyboard: CGFloat = 210
     @State private var editMode: EditMode = .inactive
@@ -29,70 +29,58 @@ struct KeyboardView: View {
     
     private let segmentIcons = ["list.bullet", "list.dash.header.rectangle"]
     
-    var timer: Timer?
-    
-
     
     var keyboardViewController: KeyboardViewController?
-
+    
     init( keyboardViewController: KeyboardViewController) {
         self.keyboardViewController = keyboardViewController
     }
     
     
     var body: some View {
-  
-            ZStack{
-                Color.clear
-                VStack{
+        
+        ZStack{
+            Color.clear
+            VStack{
                 if vm.isOpenAccessGranted() {
-                 
-                        title
-                        if items.isEmpty {
-                            Spacer()
-                            empty
-                                .frame(height: heightKeyboard)
-                        } else {
-                            List{
-                                ForEach(items.reversed()) { item in
-                                    contextTextCopiedList(text: "\(item.text)")
-                                        .padding(.vertical, -6)
-                                }
-                                .onDelete(perform: { indexSet in
-                                    for index in indexSet {
-                                        vm.delete(context: context, deleteItem: items.reversed()[index])
-                                    }
-                                })
-                                .onAppear{
-                                    
-//                                    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-//                                        
-                                        vm.gettingCopied(items: items, context: context)
-//                                    }
-                                }
-                                .onDisappear {
-//                                    timer?.invalidate()
-                                }
-                                .listRowBackground(Color.clear)
-                            }
-                           
-                            .environment(\.editMode, $editMode)
-                            .frame(height: heightKeyboard)
-                            .listStyle(.plain)
-                            
-                         
-                        }
+                    
+                    title
+                    if items.isEmpty {
                         Spacer()
-                   
+                        empty
+                            .frame(height: heightKeyboard)
+                    } else {
+                        List{
+                            ForEach(items.reversed()) { item in
+                                contextTextCopiedList(text: "\(item.text)")
+                                    .padding(.vertical, -6)
+                            }
+                            .onDelete(perform: { indexSet in
+                                for index in indexSet {
+                                    vm.delete(context: context, deleteItem: items.reversed()[index])
+                                }
+                            })
+                            .onAppear{
+                                vm.gettingCopied(items: items, context: context)
+                            }
+                            .listRowBackground(Color.clear)
+                        }
+                        
+                        .environment(\.editMode, $editMode)
+                        .frame(height: heightKeyboard)
+                        .listStyle(.plain)
+                    }
+                    Spacer()
+                    
                 } else {
                     isOpenAccessGranted
                         .padding()
                 }
-                }
             }
-        
         }
+        
     }
+}
 
 
 struct KeyboardView_Previews: PreviewProvider {
@@ -112,7 +100,7 @@ extension KeyboardView {
             .shadow(radius: 2)
             .frame(height: 47)
             .overlay {
-             
+                
                 HStack{
                     HStack{
                         Button(action: {
@@ -147,7 +135,7 @@ extension KeyboardView {
                 }  .padding()
             }
     }
-
+    
     
     private func contextTextCopiedList(text: String) -> some View{
         RoundedRectangle(cornerRadius: 10)
@@ -155,52 +143,52 @@ extension KeyboardView {
             .shadow(color: .gray.opacity(0.3), radius: 1)
             .frame(height: 50, alignment: .center)
             .overlay {
-                    HStack{
-                            Text(text)
-                                .lineLimit(2)
-                                .foregroundStyle(Color.theme.text)
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    
+                HStack{
+                    Text(text)
+                        .lineLimit(2)
+                        .foregroundStyle(Color.theme.text)
+                    Spacer()
+                }
+                .padding(.horizontal)
+                
                 
             }  .onTapGesture {
                 keyboardViewController?.insertText(text: text)
             }
     }
     
-private var empty: some View {
-    Text("\(String(localized: "KeyboardView_noCopies"))")
-        .fontWeight(.light)
+    private var empty: some View {
+        Text("\(String(localized: "KeyboardView_noCopies"))")
+            .fontWeight(.light)
     }
-
+    
     private var isOpenAccessGranted: some View{
         VStack{
             ScrollView {
-            
-                       VStack(alignment: .leading, spacing: 16) {
-                           Text("\(String(localized: "KeyboardView_OpenAccess_Text1"))")
-                               .font(.headline)
-                               .foregroundColor(.primary)
-
-                           Text("\(String(localized: "KeyboardView_OpenAccess_Text2"))")
-                           Text("\(String(localized: "KeyboardView_OpenAccess_Text3"))")
-                           Text("\(String(localized: "KeyboardView_OpenAccess_Text4"))")
-                           Text("\(String(localized: "KeyboardView_OpenAccess_Text5"))")
-                           Text("\(String(localized: "KeyboardView_OpenAccess_Text6"))")
-                               .font(.headline)
-                               .foregroundColor(.primary)
-
-
-                           .padding(.top, 16)
-                         
-                       }     .padding()
-                      
+                
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("\(String(localized: "KeyboardView_OpenAccess_Text1"))")
+                        .font(.headline)
+                        .foregroundColor(.primary)
                     
-                   } 
-            .background(RoundedRectangle(cornerRadius: 16) // Background with rounded corners
-                    .foregroundColor(Color(.systemBackground))
-                    .shadow(radius: 4))
+                    Text("\(String(localized: "KeyboardView_OpenAccess_Text2"))")
+                    Text("\(String(localized: "KeyboardView_OpenAccess_Text3"))")
+                    Text("\(String(localized: "KeyboardView_OpenAccess_Text4"))")
+                    Text("\(String(localized: "KeyboardView_OpenAccess_Text5"))")
+                    Text("\(String(localized: "KeyboardView_OpenAccess_Text6"))")
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                    
+                    
+                        .padding(.top, 16)
+                    
+                }     .padding()
+                
+                
+            }
+            .background(RoundedRectangle(cornerRadius: 16)
+                .foregroundColor(Color(.systemBackground))
+                .shadow(radius: 4))
         }
     }
 }

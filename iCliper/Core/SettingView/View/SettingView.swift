@@ -10,8 +10,9 @@ import SwiftUI
 struct SettingView: View {
     
     @Environment(\.modelContext) private var context
-
+    
     @StateObject private var vm = SettingViewModel()
+    
     @State private var showAlert:Bool = false
     
     var body: some View {
@@ -22,27 +23,18 @@ struct SettingView: View {
                         Image(systemName: "star")
                         Text(String(localized: "SettingView_RateUs"))
                             .onTapGesture {
-                                let urlString = "https://apps.apple.com/app/iCliper/6473295955?action=write-review"
-
-                                if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
-                                    UIApplication.shared.open(url) { success in
-                                        print(success ? "URL opened successfully." : "Error opening URL.")
-                                    }
-                                } else {
-                                    print("Invalid URL or cannot open URL.")
-                                }
+                                vm.rateUs()
                             }
                     }
-                   
+                    
                     HStack{
                         Image(systemName: "square.and.arrow.up")
-
                         Text(String(localized: "SettingView_ShareApp"))
                             .onTapGesture {
                                 vm.actionSheet()
                             }
                     }
-            
+                    
                     HStack{
                         Image(systemName: "hand.app")
                         NavigationLink(String(localized: "SettingView_HowToUse")) {
@@ -52,13 +44,12 @@ struct SettingView: View {
                     
                     HStack{
                         Image(systemName: "info.circle")
-                       
-                   
-                    NavigationLink("About") {
-                     AboutView()
+                        
+                        NavigationLink("About") {
+                            AboutView()
+                        }
                     }
-                    }
-                   
+                    
                 }
                 Section{
                     Text(String(localized: "SettingView_AlertDeleteAll"))
@@ -74,14 +65,11 @@ struct SettingView: View {
                             Text("\(String(localized: "SettingView_MessageAlert"))")
                         }
                 }
-                }     .navigationTitle("SettingView_Tittle")
+            }     .navigationTitle("SettingView_Tittle")
                 .navigationBarTitleDisplayMode(.inline)
-            }
-       
         }
-        
-        
     }
+}
 
 
 #Preview {

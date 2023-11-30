@@ -8,13 +8,12 @@
 import SwiftUI
 import SwiftData
 
-
 var sharedModelContainer: ModelContainer = {
     let schema = Schema([
         CopiedData.self,
     ])
     let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+    
     do {
         return try ModelContainer(for: schema, configurations: [modelConfiguration])
     } catch {
@@ -23,11 +22,11 @@ var sharedModelContainer: ModelContainer = {
 }()
 
 class SwiftDataManager {
-        
+    
     static let shared = SwiftDataManager()
     
     func addItem(context: ModelContext, text: String){
-      let item = CopiedData(text: text)
+        let item = CopiedData(text: text)
         context.insert(item)
         save(context: context)
     }
@@ -36,12 +35,12 @@ class SwiftDataManager {
         context.delete(item)
         save(context: context)
     }
-
+    
     func save(context: ModelContext){
         do {
-           try context.save()
+            try context.save()
         } catch {
-            print("# error saving")
+            print("# Error saving")
         }
     }
 }

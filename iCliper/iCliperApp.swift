@@ -11,11 +11,9 @@ import SwiftData
 @main
 struct iCliperApp: App {
     
-    @State private var selectionTab = 0
-    
     var body: some Scene {
         WindowGroup {
-            TabView(selection: $selectionTab){
+            TabView(){
                 ClipBoardView()
                     .tabItem {
                         Label(String(localized: "iCliperApp_TabView_Clipboard"), systemImage: "square.and.pencil")
