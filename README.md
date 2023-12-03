@@ -47,3 +47,8 @@ Build and run the app in the Xcode simulator or on a physical device.
 
 ## Contact
 Contributions are always welcome! If you have any ideas for features, bug fixes, or other improvements, please submit a pull request.
+
+## Download From App Store
+<p align="center">
+<a href="https://apps.apple.com/us/app/icliper-clipboard/id6473295955"><img src="./Screenshots/Download_App_Store.jpg"></a>
+</p>
