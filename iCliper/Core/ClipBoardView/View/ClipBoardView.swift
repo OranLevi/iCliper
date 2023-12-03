@@ -37,7 +37,7 @@ struct ClipBoardView: View {
                 if realArray.isEmpty {
                     empty
                 }else{
-                    ForEach(items.reversed()) { item in
+                    ForEach(realArray.reversed()) { item in
                         HStack{
                             Text("\(item.text)")
                                 .lineLimit(2)
