@@ -10,7 +10,7 @@ import AVKit
 
 struct HowToUseView: View {
     
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     
     @StateObject private var vm = HowToUseViewModel()
     

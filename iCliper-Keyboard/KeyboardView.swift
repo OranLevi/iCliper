@@ -15,27 +15,16 @@ struct KeyboardView: View {
     @Query private var items: [CopiedData]
     
     @StateObject private var vm = KeyboardViewModel()
+    
     @State private var heightKeyboard: CGFloat = 210
     @State private var editMode: EditMode = .inactive
-    @State private var isCopyButton:Bool = false {
-        didSet{
-            if isCopyButton {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.09){
-                    isCopyButton = false
-                }
-            }
-        }
-    }
-    
-    private let segmentIcons = ["list.bullet", "list.dash.header.rectangle"]
-    
+    @State private var isListMode: Bool = true
     
     var keyboardViewController: KeyboardViewController?
     
     init( keyboardViewController: KeyboardViewController) {
         self.keyboardViewController = keyboardViewController
     }
-    
     
     var body: some View {
         
@@ -50,25 +39,17 @@ struct KeyboardView: View {
                         empty
                             .frame(height: heightKeyboard)
                     } else {
-                        List{
-                            ForEach(items.reversed()) { item in
-                                contextTextCopiedList(text: "\(item.text)")
-                                    .padding(.vertical, -6)
-                            }
-                            .onDelete(perform: { indexSet in
-                                for index in indexSet {
-                                    vm.delete(context: context, deleteItem: items.reversed()[index])
-                                }
-                            })
-                            .onAppear{
-                                vm.gettingCopied(items: items, context: context)
-                            }
-                            .listRowBackground(Color.clear)
-                        }
+                        KeyboardContentClipboardView(isListMode: $isListMode, itemsArray: items, context: context, isEditMode: editMode, keyboardViewController: keyboardViewController)
                         
-                        .environment(\.editMode, $editMode)
-                        .frame(height: heightKeyboard)
-                        .listStyle(.plain)
+                            .environment(\.editMode, $editMode)
+                            .frame(height: heightKeyboard)
+                            .listStyle(.plain)
+                            .onAppear{
+                                editMode = .inactive
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7){
+                                    vm.gettingCopied(items: items, context: context)
+                                }
+                            }
                     }
                     Spacer()
                     
@@ -115,7 +96,15 @@ extension KeyboardView {
                         .buttonStyle(.bordered)
                         .disabled(items.isEmpty ? true : false)
                     }
-                    Spacer()
+                    HStack(spacing: 5){
+                        Button(action: {
+                            isListMode.toggle()
+                        }, label: {
+                            Image(systemName: isListMode ? "list.dash.header.rectangle" : "list.bullet" )
+                        })
+                        .buttonStyle(.bordered)
+                    }.font(.title2)
+                    
                     Spacer()
                     withAnimation(.spring) {
                         Text(vm.isNoTextCopied ? "\(String(localized: "KeyboardView_NoTextCopied"))" : "")
@@ -133,27 +122,6 @@ extension KeyboardView {
                         .disabled(vm.isNoTextCopied ? true : false)
                     }
                 }  .padding()
-            }
-    }
-    
-    
-    private func contextTextCopiedList(text: String) -> some View{
-        RoundedRectangle(cornerRadius: 10)
-            .foregroundColor(Color.theme.contentBackground)
-            .shadow(color: .gray.opacity(0.3), radius: 1)
-            .frame(height: 50, alignment: .center)
-            .overlay {
-                HStack{
-                    Text(text)
-                        .lineLimit(2)
-                        .foregroundStyle(Color.theme.text)
-                    Spacer()
-                }
-                .padding(.horizontal)
-                
-                
-            }  .onTapGesture {
-                keyboardViewController?.insertText(text: text)
             }
     }
     

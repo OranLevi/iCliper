@@ -10,12 +10,15 @@ import SwiftData
 
 struct ClipBoardView: View {
     
+    @Environment(\.scenePhase) private var scenePhase
     @Environment(\.modelContext) private var context
+    
     @Query private var items: [CopiedData]
     
     @State private var editMode: EditMode = .inactive
     
     @State private var itemStates: [String: Bool] = [:]
+    @State private var isListMode: Bool = true
     
     @StateObject private var vm = ClipBoardViewModel()
     
@@ -36,39 +39,24 @@ struct ClipBoardView: View {
             List{
                 if realArray.isEmpty {
                     empty
-                }else{
-                    ForEach(realArray.reversed()) { item in
-                        HStack{
-                            Text("\(item.text)")
-                                .lineLimit(2)
-                            Spacer()
-                            copyButton(textToCopy: item.text)
-                                .onTapGesture {
-                                    vm.copyButton(text: item.text)
-                                    itemStates[item.text] = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.09) {
-                                        itemStates[item.text] = false
-                                    }
-                                }
+                        .onAppear{
+                            editMode = .inactive
                         }
-                    }
-                    .onDelete(perform: { indexSet in
-                        for index in indexSet {
-                            
-                            vm.delete(context: context, deleteItem: items.reversed()[index])
-                            if items.isEmpty{
-                                editMode = .inactive
-                            }
-                        }
-                        
-                    })
+                    
+                } else {
+                    ContentClipboardView(isListMode: $isListMode, itemsArray: realArray, context: context, isEditMode: editMode)
+                        .listRowInsets(!isListMode ? EdgeInsets() : nil)
                 }
             }
-            
             .environment(\.editMode, $editMode)
             .navigationTitle("\(String(localized: "Clipboard_navigationTitle"))")
             
             .toolbar {
+                Button(action: {
+                    isListMode.toggle()
+                }, label: {
+                    Image(systemName: isListMode ? "list.dash.header.rectangle" : "list.bullet")
+                })
                 
                 Button(action: {
                     if editMode == .active {
@@ -88,25 +76,27 @@ struct ClipBoardView: View {
             prompt: "\(String(localized: "Clipboard_SearchTitle"))"
         )
         .disabled(vm.disableButtonEmptyArray(items: items) ? true : false)
-        .onAppear{
-            vm.gettingCopied(items: items, context: context)
-            
+        .onChange(of: scenePhase) {
+            if scenePhase == .active {
+                vm.gettingCopied(items: items, context: context)
+            }
         }
     }
 }
 
 #Preview {
-    ClipBoardView()
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: CopiedData.self, configurations: config)
+    
+    for i in 1..<10 {
+        let data = CopiedData(text: "CopyText")
+        container.mainContext.insert(data)
+    }
+    return ClipBoardView()
+        .modelContainer(container)
 }
 
 extension ClipBoardView{
-    
-    
-    private func copyButton(textToCopy: String) -> some View {
-        Image(systemName: itemStates[textToCopy] ?? false ? "doc.text.fill" : "doc.text")
-            .font(.title2)
-            .foregroundColor(Color.theme.buttons)
-    }
     
     private var empty: some View {
         Text("\(String(localized: "Clipboard_noCopies"))")

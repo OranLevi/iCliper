@@ -692,12 +692,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rate Us"
+            "value" : "Rate us"
           }
         },
         "he" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "דרג אותנו"
           }
         }
