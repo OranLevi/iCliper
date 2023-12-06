@@ -12,8 +12,8 @@ class ClipBoardViewModel: ObservableObject {
     
     @Published var searchText:String = ""
     
-    let service = Service.shared
-    let swiftDataManager = SwiftDataManager.shared
+    private let service = Service.shared
+    private let swiftDataManager = SwiftDataManager.shared
     
     func gettingCopied(items: [CopiedData], context: ModelContext) {
         let pasted = UIPasteboard.general.string
@@ -33,14 +33,5 @@ class ClipBoardViewModel: ObservableObject {
             return false
         }
     }
-    
-    func copyButton(text: String){
-        service.copy(text: text)
-    }
-    
-    func delete(context: ModelContext, deleteItem: CopiedData){
-        swiftDataManager.deleteItem(context: context, item: deleteItem)
-    }
-    
     
 }

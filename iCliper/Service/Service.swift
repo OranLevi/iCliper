@@ -11,15 +11,15 @@ import SwiftData
 class Service {
     
     static let shared = Service()
-    let swiftDataManager = SwiftDataManager.shared
+    private let swiftDataManager = SwiftDataManager.shared
     
     func gettingCopied(context: ModelContext,text: String){
-            swiftDataManager.addItem(context: context, text: text)
+        swiftDataManager.addItem(context: context, text: text)
     }
     
     func copy(text: String){
         let pasteBoard = UIPasteboard.general
-           pasteBoard.string = text
+        pasteBoard.string = text
     }
-
+    
 }

@@ -19,8 +19,8 @@ class KeyboardViewModel: ObservableObject {
         }
     }
     
-    let service = Service.shared
-    let swiftDataManager = SwiftDataManager.shared
+    private let service = Service.shared
+    private let swiftDataManager = SwiftDataManager.shared
     
     func gettingCopied(items: [CopiedData], context: ModelContext) {
         let pasted = UIPasteboard.general.string
@@ -40,14 +40,6 @@ class KeyboardViewModel: ObservableObject {
         } else {
             isNoTextCopied = true
         }
-    }
-    
-    func copyButton(text: String){
-        service.copy(text: text)
-    }
-    
-    func delete(context: ModelContext, deleteItem: CopiedData){
-        swiftDataManager.deleteItem(context: context, item: deleteItem)
     }
     
     func isOpenAccessGranted() -> Bool {
