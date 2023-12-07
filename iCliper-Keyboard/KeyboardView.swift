@@ -44,18 +44,17 @@ struct KeyboardView: View {
                             .environment(\.editMode, $editMode)
                             .frame(height: heightKeyboard)
                             .listStyle(.plain)
-                            .onAppear{
-                                editMode = .inactive
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7){
-                                    vm.gettingCopied(items: items, context: context)
-                                }
-                            }
                     }
                     Spacer()
                     
                 } else {
                     isOpenAccessGranted
                         .padding()
+                }
+            }
+            .onAppear{
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7){
+                    vm.gettingCopied(items: items, context: context)
                 }
             }
         }
@@ -103,6 +102,7 @@ extension KeyboardView {
                             Image(systemName: isListMode ? "list.dash.header.rectangle" : "list.bullet" )
                         })
                         .buttonStyle(.bordered)
+                        .disabled(items.isEmpty ? true : false)
                     }.font(.title2)
                     
                     Spacer()

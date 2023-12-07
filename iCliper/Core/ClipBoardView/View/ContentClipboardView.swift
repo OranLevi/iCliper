@@ -42,10 +42,10 @@ struct ContentClipboardView_Previews: PreviewProvider {
             let container = try! ModelContainer(for: CopiedData.self, configurations: config)
             
             
-            ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1")], context: ModelContext(container),isEditMode: .inactive)
+            ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 2"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 3")], context: ModelContext(container),isEditMode: .active)
             
             
-            ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1")], context: ModelContext(container),isEditMode: .inactive)
+            ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 2"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 3")], context: ModelContext(container),isEditMode: .inactive)
                 .preferredColorScheme(.dark)
         }
     }
@@ -67,15 +67,11 @@ extension ContentClipboardView {
     }
     
     private var tabMode: some View {
-        //        ScrollView {
         LazyVGrid(columns: columns, spacing: 8) {
             ForEach(itemsArray.reversed()) { item in
-                //                    HStack{
                 contextTextCopiedTab(text: "\(item.text)", item: item)
-                //                    }
             }
         }
-        //        }
         .listRowBackground(Color.clear)
     }
     
@@ -111,13 +107,12 @@ extension ContentClipboardView {
                 VStack{
                     Text(text)
                         .fontWeight(.regular)
-                    //                        .lineLimit(3)
                         .padding(9)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     
                     Spacer()
                     HStack{
-                        
+                        Spacer()
                         copyButton(textToCopy: text)
                             .onTapGesture {
                                 vm.copyButton(text: text)
@@ -133,10 +128,10 @@ extension ContentClipboardView {
                                 }
                                 .font(.title2)
                         }
-                        Spacer()
+                        
                     }
                     .padding(.bottom,3)
-                    .padding(.horizontal,4)
+                    .padding(.horizontal)
                     
                 }
                 
