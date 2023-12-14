@@ -17,5 +17,6 @@ struct ColorTheme {
     let contentBackground = Color("ContentBackground")
     let contentBackground2 = Color("ContentBackground2")
     let text = Color("Text")
+    let textDate = Color("TextDate")
     let buttons = Color("Buttons")
 }

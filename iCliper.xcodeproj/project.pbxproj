@@ -43,6 +43,8 @@
 		179D3E7E2B20E22D00114663 /* ContentClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D3E772B20DEBC00114663 /* ContentClipboardViewModel.swift */; };
 		17AE9B6E2B160BED003B3A60 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3932B139BBF0057AAB9 /* KeyboardView.swift */; };
 		17AE9B6F2B160C20003B3A60 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3892B139B910057AAB9 /* KeyboardViewController.swift */; };
+		17B367D32B28C7B600018F5F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B367D22B28C7B600018F5F /* Date.swift */; };
+		17B367D42B28C7B800018F5F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B367D22B28C7B600018F5F /* Date.swift */; };
 		17CF612A2B186624002230DD /* ShowKeyboardEN.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 17CF61292B18654F002230DD /* ShowKeyboardEN.mp4 */; };
 		17CF612C2B186740002230DD /* HowToUseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF612B2B186740002230DD /* HowToUseViewModel.swift */; };
 		17D148AE2B173D5F00E4DE1D /* ClipBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FB3772B139B740057AAB9 /* ClipBoardView.swift */; };
@@ -102,6 +104,7 @@
 		179D3E6E2B20D91D00114663 /* KeyboardContentClipboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardContentClipboardViewModel.swift; sourceTree = "<group>"; };
 		179D3E752B20DE2900114663 /* ContentClipboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentClipboardView.swift; sourceTree = "<group>"; };
 		179D3E772B20DEBC00114663 /* ContentClipboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentClipboardViewModel.swift; sourceTree = "<group>"; };
+		17B367D22B28C7B600018F5F /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		17CF61292B18654F002230DD /* ShowKeyboardEN.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShowKeyboardEN.mp4; sourceTree = "<group>"; };
 		17CF612B2B186740002230DD /* HowToUseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				176FB39F2B13A1500057AAB9 /* Color.swift */,
+				17B367D22B28C7B600018F5F /* Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -425,6 +429,7 @@
 				175BC72F2B149B730044E2EB /* SettingView.swift in Sources */,
 				176FB3782B139B740057AAB9 /* ClipBoardView.swift in Sources */,
 				175BC7312B149B7B0044E2EB /* SettingViewModel.swift in Sources */,
+				17B367D32B28C7B600018F5F /* Date.swift in Sources */,
 				179D3E6C2B20D46A00114663 /* KeyboardContentClipboard.swift in Sources */,
 				177AE0D32B16516B005D7170 /* HowToUseView.swift in Sources */,
 				17CF612C2B186740002230DD /* HowToUseViewModel.swift in Sources */,
@@ -455,6 +460,7 @@
 				172B5FE62B15369300E7771D /* CopiedData.swift in Sources */,
 				176FB3AF2B13B20E0057AAB9 /* SwiftDataManager.swift in Sources */,
 				178F36D22B1759B5007F486E /* Service.swift in Sources */,
+				17B367D42B28C7B800018F5F /* Date.swift in Sources */,
 				176FB3942B139BBF0057AAB9 /* KeyboardView.swift in Sources */,
 				176FB3A12B13A1EF0057AAB9 /* Color.swift in Sources */,
 				176FB3A62B13A6FC0057AAB9 /* KeyboardViewModel.swift in Sources */,
@@ -615,7 +621,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Oran.iCliper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -651,7 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Oran.iCliper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -681,7 +687,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Oran.iCliper.Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -711,7 +717,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Oran.iCliper.iCliper-Keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

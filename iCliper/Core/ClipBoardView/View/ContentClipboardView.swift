@@ -42,10 +42,12 @@ struct ContentClipboardView_Previews: PreviewProvider {
             let container = try! ModelContainer(for: CopiedData.self, configurations: config)
             
             
-            ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1")], context: ModelContext(container),isEditMode: .inactive)
+
+            ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 2"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 3")], context: ModelContext(container),isEditMode: .active)
             
             
-            ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1")], context: ModelContext(container),isEditMode: .inactive)
+            ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 2"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 3")], context: ModelContext(container),isEditMode: .inactive)
+
                 .preferredColorScheme(.dark)
         }
     }
@@ -56,26 +58,23 @@ extension ContentClipboardView {
     
     private var listMode: some View{
         ForEach(itemsArray.reversed()) { item in
-            contextTextCopiedList(text: item.text, item: item)
+
+            contextTextCopiedList(text: item.text, item: item, copiedOn: Date().formattedDate(inputDate: item.date))
+
         }
         .onDelete(perform: { indexSet in
             for index in indexSet {
                 vm.delete(context: context, deleteItem: itemsArray.reversed()[index])
             }
-            
         })
     }
     
     private var tabMode: some View {
-        //        ScrollView {
         LazyVGrid(columns: columns, spacing: 8) {
             ForEach(itemsArray.reversed()) { item in
-                //                    HStack{
-                contextTextCopiedTab(text: "\(item.text)", item: item)
-                //                    }
+                contextTextCopiedTab(text: "\(item.text)", item: item, copiedOn: Date().formattedDate(inputDate: item.date))
             }
         }
-        //        }
         .listRowBackground(Color.clear)
     }
     
@@ -85,23 +84,27 @@ extension ContentClipboardView {
             .foregroundColor(Color.theme.buttons)
     }
     
-    private func contextTextCopiedList(text: String, item: CopiedData) -> some View{
-        HStack{
-            Text(text)
-                .lineLimit(2)
-            Spacer()
-            copyButton(textToCopy: item.text)
-                .onTapGesture {
-                    vm.copyButton(text: item.text)
-                    itemStates[item.text] = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.09) {
-                        itemStates[item.text] = false
+    private func contextTextCopiedList(text: String, item: CopiedData, copiedOn: String) -> some View{
+        VStack{
+            HStack{
+                Text(text)
+                    .lineLimit(2)
+                Spacer()
+                showDateButton(copiedOn: copiedOn)
+                copyButton(textToCopy: item.text)
+                    .onTapGesture {
+                        vm.copyButton(text: item.text)
+                        itemStates[item.text] = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.09) {
+                            itemStates[item.text] = false
+                        }
                     }
-                }
+            }
         }
     }
     
-    private func contextTextCopiedTab(text: String, item: CopiedData) -> some View{
+    private func contextTextCopiedTab(text: String, item: CopiedData, copiedOn: String) -> some View{
+
         
         RoundedRectangle(cornerRadius: 10)
             .foregroundColor(Color.theme.contentBackground2)
@@ -111,13 +114,13 @@ extension ContentClipboardView {
                 VStack{
                     Text(text)
                         .fontWeight(.regular)
-                    //                        .lineLimit(3)
-                        .padding(9)
+                        .padding(8)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     
                     Spacer()
                     HStack{
-                        
+                        Spacer()
+                        showDateButton(copiedOn: copiedOn)
                         copyButton(textToCopy: text)
                             .onTapGesture {
                                 vm.copyButton(text: text)
@@ -133,13 +136,26 @@ extension ContentClipboardView {
                                 }
                                 .font(.title2)
                         }
-                        Spacer()
+                        
                     }
                     .padding(.bottom,3)
-                    .padding(.horizontal,4)
+                    .padding(.horizontal)
                     
                 }
                 
             }
+    }
+    
+    private func showDateButton(copiedOn: String) -> some View {
+        Menu {
+            Text("\(copiedOn)")
+                .font(.caption)
+                .fontWeight(.bold)
+                .foregroundStyle(Color.theme.textDate)
+        } label: {
+            Image(systemName: "info.circle")
+                .font(.title2)
+                .foregroundColor(Color.theme.buttons)
+        }
     }
 }
