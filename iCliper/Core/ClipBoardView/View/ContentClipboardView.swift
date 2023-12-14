@@ -42,10 +42,12 @@ struct ContentClipboardView_Previews: PreviewProvider {
             let container = try! ModelContainer(for: CopiedData.self, configurations: config)
             
             
+
             ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 2"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 3")], context: ModelContext(container),isEditMode: .active)
             
             
             ContentClipboardView(isListMode: .constant(false), itemsArray: [CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 2"),CopiedData(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 3")], context: ModelContext(container),isEditMode: .inactive)
+
                 .preferredColorScheme(.dark)
         }
     }
@@ -56,7 +58,9 @@ extension ContentClipboardView {
     
     private var listMode: some View{
         ForEach(itemsArray.reversed()) { item in
+
             contextTextCopiedList(text: item.text, item: item, copiedOn: Date().formattedDate(inputDate: item.date))
+
         }
         .onDelete(perform: { indexSet in
             for index in indexSet {
@@ -100,6 +104,7 @@ extension ContentClipboardView {
     }
     
     private func contextTextCopiedTab(text: String, item: CopiedData, copiedOn: String) -> some View{
+
         
         RoundedRectangle(cornerRadius: 10)
             .foregroundColor(Color.theme.contentBackground2)
